@@ -200,3 +200,24 @@ function dal_connect {ssh -i $HOME\.ssh\your-public-key.pub your-username@host}
 # 5. Connect the V-Server with GitHub
 
 This allows the server to access GitHub repositories directly.
+* Generate a new SSH key on the server
+```bash
+ssh-keygen -t ed25519 -C "yours_email@myEmail.com"
+```
+
+* Copy the generated `.pub` key
+
+* Add the SSH key to GitHub
+  * Open `Settings`
+  * Go to `SSH and GPG keys`
+  * Click `New SSH key`
+  * Paste the public key
+
+* Test the GitHub connection
+```bash
+ssh -T git@github.com
+```
+
+If the fingerprint is accepted, the connection works.
+
+---
