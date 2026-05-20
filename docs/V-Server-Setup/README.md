@@ -111,4 +111,25 @@ sudo apt update
 * Install Nginx
 ```bash
 sudo apt install nginx -y
+```* Check the Nginx status
+```bash
+systemctl status nginx.service
+```
+
+* Open the browser:
+```bash
+http://<your_ip_address>
+```
+
+You should now see the default Nginx page.
+
+---
+
+# 3. Change the Nginx default page
+
+After installing Nginx, you can create your own custom page.
+
+* Show the current Nginx page
+```bash
+sudo cat /var/www/html/index.nginx-debian.html
 ```
