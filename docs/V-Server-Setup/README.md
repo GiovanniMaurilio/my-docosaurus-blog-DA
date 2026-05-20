@@ -1,20 +1,6 @@
-# V-Server Setup
+# V-Server Setup Guide
 
-## SSH Setup
-- SSH key generated locally
-- copied to server using ssh-copy-id
-- password login disabled
-- tested SSH login works
+This guide explains how to set up a V-Server.  
+You will configure SSH access, improve server security, install Nginx, connect GitHub, and manage multiple SSH identities.
 
-## NGINX Setup
-- installed nginx
-- configured web root
-- restarted nginx service
-- tested in browser via server IP
-
-## Git Setup
-- git config user. and email set
-- SSH key added to GitHub
-- tested with: ssh -T git@github.com
-
-## Server IP
+---
