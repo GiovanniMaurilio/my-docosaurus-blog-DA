@@ -132,4 +132,38 @@ After installing Nginx, you can create your own custom page.
 * Show the current Nginx page
 ```bash
 sudo cat /var/www/html/index.nginx-debian.html
+```* Add this configuration
+```bash
+server {
+   listen 8081;
+   listen [::]:8081;
+
+   root /var/www/alternatives;
+   index alternate-index.html;
+
+   location / {
+      try_files $uri $uri/ =404;
+   }
+}
 ```
+
+## Edit the HTML page
+
+* Open the HTML file
+```bash
+sudo nano /var/www/alternatives/alternate-index.html
+```
+
+* Add this example code
+```html
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>Hello nginx!</title>
+</head>
+<body>
+      <h1>Hello nginx!</h1>
+      <p>Nginx is now running on the Ubuntu server.</p>
+</body>
+</html>
