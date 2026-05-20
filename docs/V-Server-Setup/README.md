@@ -13,9 +13,8 @@
 - tested in browser via server IP
 
 ## Git Setup
-- git config user.name and email set
+- git config user. and email set
 - SSH key added to GitHub
 - tested with: ssh -T git@github.com
 
 ## Server IP
-YOUR_SERVER_IP_HEREg
