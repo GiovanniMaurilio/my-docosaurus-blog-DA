@@ -88,4 +88,27 @@ logout
 This should work:
 ```bash
 ssh-copy-id -i $HOME/.ssh/your-public-key.pub your-username@host
+```* Test login without public key authentication  
+This should show `Permission denied`
+```bash
+ssh -o PubkeyAuthentication=no your-username@host
+```
+
+---
+
+# 2. Install and start a web server
+
+* Connect to the server
+```bash
+ssh-copy-id -i $HOME/.ssh/your-public-key.pub your-username@host
+```
+
+* Update the package list
+```bash
+sudo apt update
+```
+
+* Install Nginx
+```bash
+sudo apt install nginx -y
 ```
