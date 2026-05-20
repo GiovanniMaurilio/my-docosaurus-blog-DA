@@ -64,3 +64,28 @@ sudo nano /etc/ssh/sshd_config
 ```bash
 #PasswordAuthentication yes
 ```
+* To this:
+```bash
+#PasswordAuthentication no
+```
+
+* Save and close the file  
+`CTRL + O` → `Enter` → `CTRL + X`
+
+* Restart the SSH service
+```bash
+sudo systemctl restart ssh.service
+```
+
+* Logout from the server
+```bash
+logout
+```
+
+## Test the configuration
+
+* Test login with the SSH key  
+This should work:
+```bash
+ssh-copy-id -i $HOME/.ssh/your-public-key.pub your-username@host
+```
