@@ -167,3 +167,36 @@ sudo nano /var/www/alternatives/alternate-index.html
       <p>Nginx is now running on the Ubuntu server.</p>
 </body>
 </html>
+```
+
+* Restart Nginx
+```bash
+sudo service nginx restart
+```
+
+* Open the page in your browser
+```bash
+http://<your_ip_address>:8081
+```
+
+---
+
+# 4. Create shell aliases
+
+Aliases help you connect faster to the server.
+
+## Linux
+```bash
+alias dal_connect="ssh -i $HOME\.ssh\your-public-key.pub your-username@host"
+```
+
+## Windows
+```bash
+function dal_connect {ssh -i $HOME\.ssh\your-public-key.pub your-username@host}
+```
+
+---
+
+# 5. Connect the V-Server with GitHub
+
+This allows the server to access GitHub repositories directly.
