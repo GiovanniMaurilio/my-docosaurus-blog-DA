@@ -38,3 +38,29 @@ ssh-copy-id -i $HOME/.ssh/your-public-key.pub your-username@host
 ```cmd
 type $HOME\.ssh\your-public-key.pub | ssh your-username@host "cat >> .ssh/authorized_keys"
 ```
+* Test the SSH connection
+```bash
+ssh -i $HOME/.ssh/your-public-key.pub your-username@host
+```
+
+* Check the authorized SSH keys
+```bash
+cat ~/.ssh/authorized_keys
+```
+
+* Login again using the SSH key
+```bash
+ssh -i $HOME/.ssh/your-public-key.pub your-username@host
+```
+
+## Disable password login
+
+* Open the SSH config file
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+* Change this line:
+```bash
+#PasswordAuthentication yes
+```
