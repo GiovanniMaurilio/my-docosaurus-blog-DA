@@ -221,3 +221,36 @@ ssh -T git@github.com
 If the fingerprint is accepted, the connection works.
 
 ---
+# 6. Configure multiple SSH identities
+
+You can use different SSH keys for different servers.
+
+* Open the SSH folder
+```bash
+$HOME\.ssh\
+```
+
+* Create a `config` file if it does not exist
+
+## Example configuration
+```bash
+Host host1
+   HostName host1.example.com
+   User user1
+   IdentityFile $HOME/.ssh/key1
+
+Host host2
+   HostName host2.example.com
+   User user1
+   IdentityFile $HOME/.ssh/key2
+```
+
+## Test the connections
+
+```bash
+ssh host1
+```
+
+```bash
+ssh host2
+```
