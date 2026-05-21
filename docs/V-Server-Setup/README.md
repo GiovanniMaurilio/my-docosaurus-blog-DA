@@ -107,11 +107,8 @@ sudo apt update
 * Install Nginx
 ```bash
 sudo apt install nginx -y
-```* Check the Nginx status
-```bash
+# Check the Nginx status
 systemctl status nginx.service
-```
-
 * Open the browser:
 ```bash
 http://<your_ip_address>
