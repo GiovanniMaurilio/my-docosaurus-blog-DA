@@ -64,10 +64,6 @@ sudo nano /etc/ssh/sshd_config
 ```bash
 #PasswordAuthentication yes
 ```
-* To this:
-```bash
-#PasswordAuthentication no
-```
 
 * Save and close the file  
 `CTRL + O` → `Enter` → `CTRL + X`
