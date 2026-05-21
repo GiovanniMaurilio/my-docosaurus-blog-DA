@@ -24,7 +24,7 @@ ssh-keygen -t ed25519
 
 * Login to the server with username and password
 ```bash
-ssh -i $HOME/.ssh/your-public-key.pub your-username@host
+ssh -i $HOME/.ssh/<your-public-key>.pub <your-username>@<host>
 ```
 
 * Copy the public SSH key to the server
